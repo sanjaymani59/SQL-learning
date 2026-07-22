@@ -8,7 +8,18 @@ Firstname varchar(255),
 Address varchar(255),
 city varchar(255)
 );
+insert into person
+value(101,"ram","son","erode","chennai");
+insert into person
+values(102,"sam","sooon","coimbator","tamilnadu"),
+	  (103,"sajan","saibai","nildo","kerla");
 
-select*from person;
+insert into person(personID,Lastname,city)
+values(104,"danc","pollachi");
+
+select* from person where personid !=101;
+
+
+select * from person;
 
 show databases;
