@@ -34,10 +34,15 @@ commit;
 
 select * from person;
 
+select* from person where personID=104;
+
+select*from person where Firstname  is not null;
 
 
 show databases;
 
+
+use hello;
 create table hello(
 		 dated date,
          tad  datetime,
@@ -47,14 +52,31 @@ create table hello(
 insert into hello
 values(current_date(),now(),current_time());
 
+
+
 commit;
 rollback;
-         
-         
-         
-select*from hello
-         
 
+select*from hello;
+         
+         
+         
+select*from hello;
+
+create database product;
+
+use product;
+create table product(
+		p_id int,
+        p_name varchar(30) unique,
+        price decimal(6,2)
+        );
+        
+insert into product
+values (1,"rice",300.5);
+
+        
+select*from product;
 
 
 
