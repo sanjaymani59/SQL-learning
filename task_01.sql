@@ -13,8 +13,21 @@ create table student(
 
 insert into student values
 (1,'sam',34,'cse',56,'chennai'),
-(2,'aruv',34,'bce',56,'dubai');
+(2,'aruv',34,'bce',56,'dubai'),
+(1,'rahul',45,'it',43,'salem');
 
 select*from student;
+
+select*from student where marks>40;
+
+select*from student order by marks desc;
+
+select max(marks) as highest_marks from student;
+
+select min(marks) as highest_marks from student;
+
+select avg(marks) as highest_marks from student;
+
+select name from student;
 
     

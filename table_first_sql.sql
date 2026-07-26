@@ -66,14 +66,20 @@ select*from hello;
 create database product;
 
 use product;
+;
+        
+
 create table product(
 		p_id int,
-        p_name varchar(30) unique,
+        p_name varchar(30),
         price decimal(6,2)
         );
-        
+
 insert into product
-values (1,"rice",300.5);
+values(2,"orange",50);
+insert into product
+values (1,"rice",30.5);
+
 
         
 select*from product;
