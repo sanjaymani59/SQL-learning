@@ -13,10 +13,28 @@ create table student(
 
 insert into student values
 (1,'sam',34,'cse',56,'chennai'),
-(2,'aruv',34,'bce',56,'dubai'),
-(1,'rahul',45,'it',43,'salem');
+(2,'aruv',34,'bce',56,'dubai');
+
+insert into student values
+(3,'rahul',45,'it',43,'salem'),
+(4,'jay',56,'mech',56,'goa');
+
+insert into student values
+(5,'naser',56,'pct',54,'singapor'),
+(6,'alli',34,'tt',32,'germany');
+
+insert into student values
+(8,'basha',43,'cse',70,'kochi');
 
 select*from student;
+select*from student order by name asc;
+select count(*) as total_students from student;
+select departament,count(*) as total_students from student group by departament;
+
+select*from student where marks>50;
+select *from student where departament='cse';
+
+select name, marks from student;
 
 select*from student where marks>40;
 
