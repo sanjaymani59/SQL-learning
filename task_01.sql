@@ -30,6 +30,23 @@ select*from student;
 select*from student order by name asc;
 select count(*) as total_students from student;
 select departament,count(*) as total_students from student group by departament;
+select departament,avg(marks) as average_marks from student group by departament;
+
+select departament,avg(marks) as average_marks from student group by departament having avg(marks)>60;
+
+select * from student where marks between 50 and 70;
+
+select*from student where name like 's%';
+select*from student where name like '%n';
+
+
+
+
+
+
+
+
+
 
 select*from student where marks>50;
 select *from student where departament='cse';
@@ -47,5 +64,6 @@ select min(marks) as highest_marks from student;
 select avg(marks) as highest_marks from student;
 
 select name from student;
+
 
     
