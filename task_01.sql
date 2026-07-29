@@ -39,6 +39,16 @@ select * from student where marks between 50 and 70;
 select*from student where name like 's%';
 select*from student where name like '%n';
 
+select *from student where departament='cse' and marks >50;
+
+select *from student where city in ('chennai','goa');
+
+select *from student order by marks asc limit 5;
+
+update student set marks=98 where student_id =1;
+
+update student set city='the nilgiris' where student_id=1;
+
 
 
 
