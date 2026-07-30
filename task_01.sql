@@ -36,6 +36,19 @@ select departament,avg(marks) as average_marks from student group by departament
 
 select * from student where marks between 50 and 70;
 
+
+update student set marks =90 where student_id = 5;
+
+update student set city='thai' where student_id = 3;
+
+alter table student add email varchar(100);
+update student set email='dhana@gmail.com' where student_id=3;
+
+update student set email = 'jhon@gmail.com' where student_id =4;
+
+
+
+
 select*from student where name like 's%';
 select*from student where name like '%n';
 
