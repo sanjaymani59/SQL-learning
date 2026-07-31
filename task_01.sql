@@ -26,6 +26,18 @@ insert into student values
 insert into student values
 (8,'basha',43,'cse',70,'kochi');
 
+select distinct departament from student;
+
+select name as stdudent_name from student;
+
+select*from student where departament='cse' and departament='ece';
+
+select*from student where departament='cse' or departament='ece';
+
+
+
+
+
 select*from student;
 select*from student order by name asc;
 select count(*) as total_students from student;
