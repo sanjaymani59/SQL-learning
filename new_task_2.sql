@@ -7,8 +7,11 @@ create table workers(
     dailay_wages int);
     
     
-insert into workers values ('ram','bokka',5999);
-    
-select*from workers;
+insert into workers values ('ram','bokka',5999,05-07-2026);
+alter table workers add Date_of_work date;
+
+alter table workers add month_of_work varchar(9);
+
+
 
 
