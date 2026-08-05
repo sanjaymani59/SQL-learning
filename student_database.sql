@@ -17,5 +17,20 @@ insert into students values
 (6,'logesh','tt',3,70),
 (7,'monish','cse',3,85);
 
+update students set student_name ='ramana' where student_id=4;
+
+alter table students add student_email varchar(30);
+
+update students set student_email='ragul@mail.com' where student_id=1;
+update students set student_email='naveen@gmail.com' where student_id=2;
+update students set student_email='kavi@gmail.com' where student_id=3;
+update students set student_email='raja@gmail.com' where student_id=4;
+update students set student_email='deva@gmail.com' where student_id=5;
+update students set student_email='logesh@gmail.com' where student_id=6;
+update students set student_email='monish@gmail.com' where student_id=7;
+
+
+
+
 drop table students;
 select *from students;
