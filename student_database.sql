@@ -29,6 +29,14 @@ update students set student_email='deva@gmail.com' where student_id=5;
 update students set student_email='logesh@gmail.com' where student_id=6;
 update students set student_email='monish@gmail.com' where student_id=7;
 
+select*from students where student_name like'r%';
+select *from students where student_name like '%a';
+
+select max(student_mark) as high_marks from students;
+
+select avg(student_mark) as high_mark from students;
+
+
 
 
 
