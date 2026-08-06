@@ -36,6 +36,17 @@ select max(student_mark) as high_marks from students;
 
 select avg(student_mark) as high_mark from students;
 
+select count(*) as total_student from students;
+
+select*from students order by student_name asc;
+select *from students order by student_name desc;
+
+select *from students where student_mark between 50 and 70;
+
+select*from students where student_year=3;
+
+select*from students where student_email='logesh@gmail.com';
+
 
 
 
