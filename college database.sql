@@ -5,6 +5,7 @@ name varchar(50),
 age int,
 department varchar(40),
 city varchar(40));
+
 drop table stu_d_ent;
 select*from stu_d_ent;
 
@@ -18,9 +19,10 @@ create table Marks(
 mark_id int primary key ,
 student_id int,
 course_id int,
-marks int ,
-foreign key (student_id) references stu_d_ent(student_id),
-foreign key (course_id) references course(course_id));
+marks int );
+-- foreign key (student_id) references stu_d_ent(student_id),--
+-- foreign key (course_id) references course(course_id));--
+drop table Marks;
 select* from marks;
 
 -- inserting data to all table-- 
@@ -67,9 +69,20 @@ insert into Marks values
 (18,8,108,35);
 
 
+select*FROM marks;
+
+select*from stu_d_ent where department="cse";
+
+select*from stu_d_ent where department="cse" and city="chennai";
+
+select*from stu_d_ent order by age;
+
+select*from stu_d_ent order by name asc;
+
+select*from stu_d_ent limit 3;
 
 
-
+select max(marks) from marks;
 
 
 
