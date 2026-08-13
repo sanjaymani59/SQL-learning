@@ -84,6 +84,15 @@ select*from stu_d_ent limit 3;
 
 select max(marks) from marks;
 
+select*from marks where  marks>45; 
+
+select*from marke where marks>=50;
+
+select*from marks where mark_id;
+
+select*from marks where marks> 60;
+
+select*from marks where marks
 
 
 
