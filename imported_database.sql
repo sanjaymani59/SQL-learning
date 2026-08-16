@@ -23,6 +23,12 @@ select*from for_database where product_category
 regexp 'beauty';
 select*from for_database where product_category 
 like '%e';
+select*from for_database order by unit_price asc;
+select*from for_database order by delivery_days asc;
+
+select*from for_database where product_category ='home' or product_category ='beauty';
+
+
 
 
 
