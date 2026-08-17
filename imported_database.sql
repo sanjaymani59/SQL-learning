@@ -28,6 +28,9 @@ select*from for_database order by delivery_days asc;
 
 select*from for_database where product_category ='home' or product_category ='beauty';
 
+select*from for_database where product_category regexp '%s';
+
+
 
 
 
