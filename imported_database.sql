@@ -1,6 +1,6 @@
 use employee;
-
 select*from for_database;
+
 drop table employee;
 select*from 
 for_database where payment_method like '%c'; 
@@ -32,6 +32,9 @@ select*from for_database where product_category regexp '%s';
 
 
 
+select*from for_database where product_category in ('home','beauty','clothing');
 
+
+select customer_id ,sum(revenue) as total_spend, dense_rank() over (order by sum(revenue)  desc) as spend_rank from for_database group by customer_id;
 
 
