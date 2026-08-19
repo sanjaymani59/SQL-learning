@@ -35,6 +35,17 @@ select*from for_database where product_category regexp '%s';
 select*from for_database where product_category in ('home','beauty','clothing');
 
 
-select customer_id ,sum(revenue) as total_spend, dense_rank() over (order by sum(revenue)  desc) as spend_rank from for_database group by customer_id;
+select customer_id ,sum(revenue) 
+as total_spend, dense_rank() over (order by sum(revenue)  desc) 
+as spend_rank from for_database group by customer_id;
 
+alter table for_database drop  summa;
+
+desc for_database;
+
+select *from for_database where payment_method in ('card','wallet');
+alter table for_database rename to imported_data;
+select*from imported_data;
+
+select*from imported_data where revenue>'30';
 
