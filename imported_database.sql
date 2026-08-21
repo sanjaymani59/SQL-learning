@@ -61,4 +61,3 @@ select*from imported_data where unit_price>30  and  region ='east' and product_c
 
 
 
-
