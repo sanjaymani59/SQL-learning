@@ -47,6 +47,12 @@ select*from drivers;
 
 delete from drivers where driver_id=101;
 
+create table demo1(sno int, name varchar(100),country varchar(50) default'ind');
+select*from demo1;
+desc demo1;
+
+insert into demo1 values(1 ,'sam','ind');
+
 
 
 desc riders;
