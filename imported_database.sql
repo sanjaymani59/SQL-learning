@@ -55,7 +55,24 @@ select*from imported_data where unit_price >30 order by unit_price asc;
 select*from imported_data where unit_price>30  and  region ='east' and product_category='clothing' order by unit_price asc;
 
 -- constrine
- 
+
+select count(*) from imported_data where product_category ='Clothing' ;
+select count(*) from imported_data where product_category ='Clothing'and payment_method= 'card';
+select count(*) from imported_data where product_category in('Clothing','home');
+select count(*) from imported_data where product_category not in('Clothing','home');
+
+select sum(unit_price) from imported_data where  product_category ='Clothing';
+select sum(revenue) as total from imported_data where  product_category ='Clothing';
+select min(unit_price) as min_total from imported_data where  product_category ='Clothing';
+select max(unit_price) as max_total from imported_data where  product_category ='Clothing';
+
+select avg(unit_price) as avg_total from imported_data where  product_category ='Clothing';
+
+
+
+
+
+
  
 
 
