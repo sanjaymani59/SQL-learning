@@ -68,6 +68,27 @@ select max(unit_price) as max_total from imported_data where  product_category =
 
 select avg(unit_price) as avg_total from imported_data where  product_category ='Clothing';
 
+select product_category,sum(unit_price) as total_individual_gain from imported_data group by product_category;
+select product_category ,sum(revenue) as total_individual_revenue from imported_data group by product_category;
+select payment_method ,sum(revenue) as total_individual_revenue from imported_data group by payment_method;
+-- aggression --
+select payment_method ,sum(revenue) as total_individual_revenue from imported_data group by payment_method having sum(revenue)>500;
+
+select product_category,payment_method ,
+		case 
+			when revenue >40 then 'high revenue'
+            when revenue between 30 and 40 then 'mediam revenue'
+            when revenue <= 15 then 'low revenue'
+		else "not data"
+			
+		end as total_revenu_person_spending from imported_data;
+            
+select*from imported_data;
+
+
+
+
+
 
 
 
