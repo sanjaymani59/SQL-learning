@@ -83,6 +83,24 @@ select product_category,payment_method ,
 			
 		end as total_revenu_person_spending from imported_data;
             
+		
+select region,order_date, 
+	case
+		when revenue >40 then 'high revenue'
+            when revenue between 30 and 40 then 'mediam revenue'
+            when revenue <= 15 then 'low revenue'
+		else "not data"
+        
+        end as total_of_all from imported_data;
+        
+        select region, 
+	case
+		when revenue >40 then 'high revenue'
+            when revenue between 30 and 40 then 'mediam revenue'
+            when revenue <= 15 then 'low revenue'
+		else "not data"
+        
+        end as total_of_all   from imported_data order by region;
 select*from imported_data;
 
 
