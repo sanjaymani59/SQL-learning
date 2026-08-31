@@ -105,7 +105,20 @@ select region,order_date,
         end as total_of_all   from imported_data order by region;
 select*from imported_data;
 
-
+select
+	customer_id,
+    case
+		when customer_id is null then '0.00'
+        
+	else
+		customer_id
+        
+	end as customer from imported_data;
+    
+    
+    
+    
+        
 
 
 
