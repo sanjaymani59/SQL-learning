@@ -103,7 +103,8 @@ select region,order_date,
 		else "not data"
         
         end as total_of_all   from imported_data order by region;
-select*from imported_data;
+select*from imported_data limit 20;
+select*from imported_data limit 10;
 
 select
 	customer_id,
@@ -115,7 +116,19 @@ select
         
 	end as customer from imported_data;
     
-    
+select count(*) from  imported_data where customer_id is null;
+select count(*) from  imported_data where customer_id ="null";
+
+select order_id,
+	order_date,
+    ifnull(order_date, '000')
+    from imported_data;
+
+
+select order_id,
+	order_date,
+    coalesce (order_date, '000')
+    from imported_data; 
     
     
         
