@@ -53,6 +53,7 @@ select*from imported_data where revenue>'30';
 
 select*from imported_data where unit_price >30 order by unit_price  desc;
 select*from imported_data where unit_price >30 order by unit_price asc;
+select*from imported_data where unit_price >30 order by unit_price asc;
 
 select*from imported_data where unit_price>30  and  region ='east' and product_category='clothing' order by unit_price asc;
 
@@ -127,9 +128,15 @@ select order_id,
 
 select order_id,
 	order_date,
-    coalesce (order_date, '000')
+    coalesce (order_date, '000 ') as hello 
     from imported_data; 
     
+    
+select discount , 
+		coalesce(discount,'hi')
+        from imported_data; 
+        
+
     
         
 
