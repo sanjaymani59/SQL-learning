@@ -136,6 +136,14 @@ select discount ,
 		coalesce(discount,'hi')
         from imported_data; 
         
+select avg(delivery_days) from imported_data;
+select max(delivery_days) from imported_data;
+select min(delivery_days) from imported_data;
+select count(delivery_days) from imported_data;
+
+        
+
+        
 
     
         
