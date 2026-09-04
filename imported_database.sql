@@ -117,7 +117,10 @@ select
         
 	end as customer from imported_data;
     
+    -- null is not in string --  
+    
 select count(*) from  imported_data where customer_id is null;
+-- null in string --  
 select count(*) from  imported_data where customer_id ="null";
 
 select order_id,
@@ -133,13 +136,23 @@ select order_id,
     
     
 select discount , 
-		coalesce(discount,'hi')
+		coalesce(discount,'0.00') as amount
         from imported_data; 
         
 select avg(delivery_days) from imported_data;
 select max(delivery_days) from imported_data;
 select min(delivery_days) from imported_data;
 select count(delivery_days) from imported_data;
+
+
+-- string handling 
+--  
+
+select length (  product_category ) as length_of_string , 
+upper(product_category ),
+lower(product_category) from imported_data;
+
+
 
         
 
