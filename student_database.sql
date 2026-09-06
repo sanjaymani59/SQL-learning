@@ -55,7 +55,9 @@ select length(student_name) as lengthh  ,upper(student_name) from students;
 select length(student_name) as lengthh  ,lower(student_name) from students;
 
 
+select count(student_name) as names_ from students;
 
+select*from  sd  where student_year =3 order by student_name asc;
 
 drop table students;
-select *from students;
+select *from sd;

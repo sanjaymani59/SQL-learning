@@ -159,13 +159,7 @@ lower(product_category) from imported_data;
         
 
     
-        
-
-
-
-
-
-
+    
 
 
  
