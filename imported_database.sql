@@ -150,7 +150,22 @@ select count(delivery_days) from imported_data;
 
 select length (  product_category ) as length_of_string , 
 upper(product_category ),
-lower(product_category) from imported_data;
+lower(product_category) ,
+concat(product_category,' ',region ) as concatination,
+substring(product_category,1,3),
+trim(product_category) as trim ,-- space minimizing or removing,
+lpad(product_category,10,'*') as lpad,
+rpad(product_category,10,"#") as rpad,
+
+replace(product_category,' ', '_') as replace__,
+instr(product_category,'c') as insteee,
+
+format(order_id ,2 ) as order__
+
+
+from imported_data;
+
+
 
 
 
@@ -159,7 +174,13 @@ lower(product_category) from imported_data;
         
 
     
-    
+        
+
+
+
+
+
+
 
 
  
