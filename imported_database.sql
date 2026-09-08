@@ -165,6 +165,7 @@ format(order_id ,2 ) as order__
 
 from imported_data;
 
+select product_category ,(select max(revenue) from imported_data) as too;
 
 
 
