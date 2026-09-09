@@ -166,7 +166,23 @@ format(order_id ,2 ) as order__
 from imported_data;
 
 select product_category ,(select max(revenue) from imported_data) as too;
+select*from imported_data limit 10;
 
+select product_category from imported_data where exists(select *from imported_data where product_category='home');
+
+
+
+
+select length_of_string from (
+select 
+length (  product_category ) as length_of_string , 
+upper(product_category ),
+lower(product_category) ,
+concat(product_category,' ',region ) as concatination,
+substring(product_category,1,3),
+trim(product_category) as trim ,-- space minimizing or removing,
+lpad(product_category,10,'*') as lpad,
+rpad(product_category,10,"#") as rpad from imported_data) as subqury;
 
 
 
