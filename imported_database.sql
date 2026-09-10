@@ -184,8 +184,9 @@ trim(product_category) as trim ,-- space minimizing or removing,
 lpad(product_category,10,'*') as lpad,
 rpad(product_category,10,"#") as rpad from imported_data) as subqury;
 
+select*from imported_data limit 10;
 
-
+select  product_category ,region from  imported_data  where payment_method ="card";
         
 
         
