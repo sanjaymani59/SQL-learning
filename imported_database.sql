@@ -187,6 +187,7 @@ rpad(product_category,10,"#") as rpad from imported_data) as subqury;
 select*from imported_data limit 10;
 
 select  product_category ,region from  imported_data  where payment_method ="card";
+select  delivery_days from imported_data where payment_method ="card";
         
 
         
