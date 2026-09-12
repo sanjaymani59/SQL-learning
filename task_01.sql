@@ -11,6 +11,8 @@ create table student(
     city varchar(50)
     );
 
+select*from student where name='name' and departament='departament';
+
 insert into student values
 (1,'sam',34,'cse',56,'chennai'),
 (2,'aruv',34,'bce',56,'dubai');
@@ -33,6 +35,9 @@ select name as stdudent_name from student;
 select*from student where departament='cse' and departament='ece';
 
 select*from student where departament='cse' or departament='ece';
+
+
+create table stuff(
 
 
 
@@ -82,7 +87,6 @@ update student set city='the nilgiris' where student_id=1;
 
 
 
-
 select*from student where marks>50;
 select *from student where departament='cse';
 
@@ -99,6 +103,46 @@ select min(marks) as highest_marks from student;
 select avg(marks) as highest_marks from student;
 
 select name from student;
+
+
+select *from student;
+select*from student where marks;
+select marks from student;
+
+select
+marks , (marks+10)
+from student;
+
+drop table stuffs;
+create table stuffs(
+	stuffs_id int primary key,
+    Name_ varchar(50),
+    age int,
+    departament varchar(50),
+    grade int,
+    city varchar(50)
+    );
+    
+insert into stuffs values( 1,'suganthini',35,'cse',1,'erode' );
+insert into stuffs values( 2,'divya deepa',25,'cse',4,'ooo' );
+insert into stuffs values( 3,'baby',38,'cse',6,'buvani' );
+
+select*from stuffs;
+select*from student;
+
+create table student(
+	student_id int primary key,
+    Name_ varchar(50),
+    age int,
+    departament varchar(50),
+    marks int (50),
+    city varchar(50)
+    );
+
+select s.student_id,o.stuffs_id  from student s join  stuffs o on s.student_id = o.stuffs_id;
+
+
+
 
 
     
