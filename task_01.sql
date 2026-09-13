@@ -126,6 +126,9 @@ create table stuffs(
 insert into stuffs values( 1,'suganthini',35,'cse',1,'erode' );
 insert into stuffs values( 2,'divya deepa',25,'cse',4,'ooo' );
 insert into stuffs values( 3,'baby',38,'cse',6,'buvani' );
+insert into stuffs values( 4,'sasi',35,'cse',1,'erode' );
+insert into stuffs values( 5,' deepa',25,'cse',4,'rr' );
+insert into stuffs values( 6,'saii',38,'cse',6,']ch' );
 
 select*from stuffs;
 select*from student;
@@ -140,6 +143,9 @@ create table student(
     );
 
 select s.student_id,o.stuffs_id  from student s join  stuffs o on s.student_id = o.stuffs_id;
+select s.student_id,o.stuffs_id  from student s left join  stuffs o on s.student_id = o.stuffs_id;
+3;58;
+select s.student_id,o.stuffs_id  from student s right join  stuffs o on s.student_id = o.stuffs_id;
 
 
 
