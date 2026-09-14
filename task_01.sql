@@ -144,8 +144,15 @@ create table student(
 
 select s.student_id,o.stuffs_id  from student s join  stuffs o on s.student_id = o.stuffs_id;
 select s.student_id,o.stuffs_id  from student s left join  stuffs o on s.student_id = o.stuffs_id;
-3;58;
+-- 3;58;
 select s.student_id,o.stuffs_id  from student s right join  stuffs o on s.student_id = o.stuffs_id;
+
+
+select departament,marks, sum(marks) over (partition by departament ) as total from student;
+
+select grade , name_,age, sum(grade) over (partition by name_ order by age asc) as names_ from stuffs;
+
+select name,city,age , row_number() over( partition by age order by age asc ) as order_ from student; 
 
 
 
