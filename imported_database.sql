@@ -198,7 +198,7 @@ select  delivery_days from imported_data where payment_method ="card";
 
 
 
-
+ 
 
 
 

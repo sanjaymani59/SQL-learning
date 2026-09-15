@@ -141,6 +141,10 @@ create table student(
     marks int (50),
     city varchar(50)
     );
+    
+with rk as (select student_id,age,departament,marks,city, row_number () over (partition by age order by marks asc) as alll from student)
+select student_id,age,marks from student where alll =3;
+
 
 select s.student_id,o.stuffs_id  from student s join  stuffs o on s.student_id = o.stuffs_id;
 select s.student_id,o.stuffs_id  from student s left join  stuffs o on s.student_id = o.stuffs_id;
