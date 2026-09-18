@@ -30,10 +30,15 @@ insert into sam  ( name,age,gender,city,contant) values ('jayam',45,'female','oo
 select*from sam;
 describe users;
 show tables;
+delete from sam where id= 1;
+
+update sam set 
 
 
-https://youtu.be/cpbd7CLAqtw?si=yWZhdwfrFdUMW0O_
-21;49
+
+
+-- https://youtu.be/cpbd7CLAqtw?si=yWZhdwfrFdUMW0O_
+-- 21;49
 
 
 
