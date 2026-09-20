@@ -44,6 +44,15 @@ truncate table sam ;
 select name,age,city from sam where city ='ooty';
 select name,age,city from sam where city ='kulla' and  age>=34 ;
 select name,age,city from sam where city ='kulla' or city='ooty' and age>=25 order by city;
+select name ,age from sam;
+
+select *from sam;
+
+select city from sam;
+select distinct city from sam;
+
+select count(*) city from sam;
+
 
 
 
