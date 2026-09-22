@@ -86,6 +86,19 @@ select gender ,count(id ) as total from sam group by gender;
 
 select city ,count(id) as citycount from sam  group by city;
 
+select count(*) from sam;
+
+update sam set contant=8465565656 where id=2;
+update sam set contant=59268753495 where id=3;
+update sam set contant=9756543218 where id=4;
+update sam set contant=55487844 where id=5;
+
+select *from sam order by gender asc;
+select * from sam;
+
+
+
+
 
 
 
@@ -96,6 +109,7 @@ select city ,count(id) as citycount from sam  group by city;
 
 -- https://youtu.be/cpbd7CLAqtw?si=yWZhdwfrFdUMW0O_
 -- 21;49
+-- 37;39
 
 
 
