@@ -96,7 +96,30 @@ update sam set contant=55487844 where id=5;
 select *from sam order by gender asc;
 select * from sam;
 
+alter table sam add marks int(40) not null;
+alter table sam add persentage int(40) not null;
+alter table sam add rating varchar(40)not null;
 
+insert into sam (marks,persentage,rating ) values (8,7,"i");
+
+select*from sam order by age desc limit 5;
+
+
+select city ,count(*) from sam group by city ;
+
+select *from sam;
+
+select city="chennai" ,city as total from sam group by city ;
+
+select name from  sam   limit 5 ;  
+
+
+
+-- Level 5 — Aggregate Functions
+
+
+
+ 
 
 
 
