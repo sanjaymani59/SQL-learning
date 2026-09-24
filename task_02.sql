@@ -11,13 +11,18 @@ student left join  stuffs on student.student_id =stuffs.stuffs_id;
 
 select name, student.departament, marks  from 
 student right join  stuffs on student.student_id =stuffs.stuffs_id;
-
 drop table users;
-create table users(
+drop table sam;
+create table sam(
 	ID int not null auto_increment,
     NAME varchar(50) not null ,
     age int not   null,
-    primary key(ID)
+    primary key(ID),
+    marks int(40) not null,
+    persentage int(40) not null,
+    city varchar(34) not null,
+	rating varchar(40)not null,
+    contant varchar(50)
 );
 alter table users add Gender varchar(59) not null after age;
 alter table users add city varchar(34) not null, add contant varchar(50);
@@ -38,6 +43,14 @@ delete from sam where id =4;
 
 insert into sam  ( name,age,gender,city,contant) values ('samji',39,'female','sivi','123849');
 
+insert into sam values(null,"das",45,65,56,"salem","nice","54678934");
+insert into sam values(null,"mass",32,89,69,"salem","ok","4948508");
+insert into sam values(null,"kasi",23,90,39,"salem","great","9438593");
+insert into sam values(null,"tappan",56,65,56,"salem","grougous","25782");
+insert into sam values(null,"sam",22,33,09,"salem","marvles","289742");
+insert into sam values(null,"vadi",58,68,88,"salem","amazaing ","2879542");
+insert into sam values(null,"hello",29,45,87,"salem","massive","328759289");
+insert into sam values(null,"bye",77,44,94,"salem","beautyful","20984857478");
 
 
 select*from sam;
@@ -113,7 +126,9 @@ select city="chennai" ,city as total from sam group by city ;
 
 select name from  sam   limit 5 ;  
 
-
+select gender,count(*) from sam group by gender;
+select contant ,count(*) from sam group by contant;
+select avg(marks) from sam;
 
 -- Level 5 — Aggregate Functions
 
