@@ -151,6 +151,28 @@ select avg(marks) from sam;
 
 
 
+select *from sam;
+select name from sam;
+select name,age from sam;
+select* from sam where city="salem";
+
+select * from sam where age>40;
+select*from sam where age<30;
+
+select *from sam where age>34 and marks >60;
+select *from sam where marks>40 or marks>80;
+select*from sam where age between 20 and 50;
+
+select *from sam where name="mass";
+
+select*from sam order by age asc;
+
+select*from sam order by marks desc;
+
+select*from sam order by marks desc limit 3;
+
+
+
 
 
 
