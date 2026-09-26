@@ -171,8 +171,13 @@ select*from sam order by marks desc;
 
 select*from sam order by marks desc limit 3;
 
+-- Level 5 — LIKE
+-- 21. Names ending with i
+select * from sam where name like '%i';
+-- 0. Names starting with s 
+select* from sam where name like 's%';
 
+-- 22. Names containing a
 
-
-
+select * from sam where name like '%a%';
 
