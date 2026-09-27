@@ -42,15 +42,15 @@ delete from sam where id =4;
 
 
 insert into sam  ( name,age,gender,city,contant) values ('samji',39,'female','sivi','123849');
-
+drop table sam;
 insert into sam values(null,"das",45,65,56,"salem","nice","54678934");
-insert into sam values(null,"mass",32,89,69,"salem","ok","4948508");
-insert into sam values(null,"kasi",23,90,39,"salem","great","9438593");
-insert into sam values(null,"tappan",56,65,56,"salem","grougous","25782");
-insert into sam values(null,"sam",22,33,09,"salem","marvles","289742");
-insert into sam values(null,"vadi",58,68,88,"salem","amazaing ","2879542");
-insert into sam values(null,"hello",29,45,87,"salem","massive","328759289");
-insert into sam values(null,"bye",77,44,94,"salem","beautyful","20984857478");
+insert into sam values(null,"mass",32,89,69,"ooty","ok","4948508");
+insert into sam values(null,"kasi",23,90,39,"karalam","great","9438593");
+insert into sam values(null,"tappan",56,65,56,"goa","grougous","25782");
+insert into sam values(null,"sam",22,33,09,"coimbator","marvles","289742");
+insert into sam values(null,"vadi",58,68,88,"erode","amazaing ","2879542");
+insert into sam values(null,"hello",29,45,87,"chennai","massive","328759289");
+insert into sam values(null,"bye",77,44,94,"nil","beautyful","20984857478");
 
 
 select*from sam;
@@ -180,4 +180,21 @@ select* from sam where name like 's%';
 -- 22. Names containing a
 
 select * from sam where name like '%a%';
+
+-- 🚀 Level 6 — DISTINCT
+-- 23. Display unique cities\\
+select *from sam;
+select distinct city from sam;
+-- 24. Display unique comments 
+select distinct contant  from sam;
+
+-- 🧠 Level 7 — UPDATE
+-- 25. Change das age to 30
+
+update sam set age =30 where name= "das";
+select *from sam where name ='das';
+
+
+
+
 
