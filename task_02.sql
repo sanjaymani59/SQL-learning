@@ -187,12 +187,27 @@ select *from sam;
 select distinct city from sam;
 -- 24. Display unique comments 
 select distinct contant  from sam;
+select distinct name from sam;
 
 -- 🧠 Level 7 — UPDATE
 -- 25. Change das age to 30
 
 update sam set age =30 where name= "das";
 select *from sam where name ='das';
+-- 26. Change hello city-- 
+
+update sam set city ='chennai' where name ='hello';
+
+
+
+-- 🗑️ Level 8 — DELETE 
+delete from sam where name = 'bye';
+select *from sam;
+
+select max(marks) from sam;
+select min(marks) from sam;
+
+select max(marks) from sam group by marks order by marks desc limit 3;
 
 
 
