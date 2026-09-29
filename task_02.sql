@@ -209,7 +209,11 @@ select min(marks) from sam;
 
 select max(marks) from sam group by marks order by marks desc limit 3;
 
+select city ,count(*) from sam group by city;
 
+select city ,avg(age) from sam group by city;
+
+select city ,max(marks) from sam group by city;
 
 
 
