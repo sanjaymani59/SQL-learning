@@ -57,9 +57,23 @@ select name,marks from students order by marks desc;
 
 select city from students group by city ;
 
+select*FROM  students where marks between 50 and 100;
+select *from students where department in ("cse","it");
+
+	-- Level 3 — AND / OR / NOT-- 
+    
+select * from students where department ='cse' and marks >60;
+select *from students where city ='salem' or city='chennai' ;
+
+select*from students where not department ='cse';
 
 
+-- Level 4 — ORDER BY
 
+select*from students order by marks;
+select*from students order by marks desc;
+
+select name,marks from students order by marks;
 
     
     
