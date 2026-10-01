@@ -48,5 +48,18 @@ select name,department,city from students;
 
 -- Level 2 — WHERE
 select *from students where marks>80;
+
+select name,course,department from students where marks>90;
+select name,course,department,marks from students where marks>90 ;
+select count(*) from students ;
+
+select name,marks from students order by marks desc;
+
+select city from students group by city ;
+
+
+
+
+
     
     
