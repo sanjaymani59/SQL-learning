@@ -75,5 +75,25 @@ select*from students order by marks desc;
 
 select name,marks from students order by marks;
 
-    
+-- Level 5 — LIMIT
+select*from students limit 5;
+select*from students order by marks desc limit 4;
+
+   --  Level 6 — DISTINCT
+select distinct department from students;
+select distinct city from students ;
+select distinct course from students;
+
+ --  Level 7 — Aggregate Functions
+-- -- COUNT()
+-- SUM ()
+-- AVG()
+-- MIN()
+-- MAX()
+
+select count(*) from students;
+select avg(marks) from students;
+select max(marks) from students;
+select min(marks) from students;
+select sum(marks) from students;
     
