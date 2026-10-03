@@ -96,4 +96,28 @@ select avg(marks) from students;
 select max(marks) from students;
 select min(marks) from students;
 select sum(marks) from students;
+
+
+    -- Level 8 — GROUP BY 
+    
+select department , count(*) from students group by department;
+select department ,avg(marks) from students group by  department ;
+select city ,max(marks) from students group by city;
+
+		-- Level 9 — HAVING
+
+select department , avg(marks) from students group by department having avg(marks)>74;
+    
+ -- WHERE → filters rows
+-- HAVING → filters groups
+
+-- Level 10 — UPDATE-- 
+
+update students set marks=99 where student_id =1;
+select *from students where student_id =1;
+
+
+    
+    
+    
     
