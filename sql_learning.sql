@@ -116,6 +116,18 @@ select department , avg(marks) from students group by department having avg(mark
 update students set marks=99 where student_id =1;
 select *from students where student_id =1;
 
+-- Level 11 — DELETE
+
+delete from students where student_id =15;
+
+-- Level 12 — ALTER TABLE-- 
+
+alter table students add email varchar(39);
+-- Modify:-- 
+alter table students modify email varchar(100);
+-- Drop:
+alter table students drop column email;
+
 
     
     
