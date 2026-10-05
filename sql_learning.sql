@@ -128,8 +128,47 @@ alter table students modify email varchar(100);
 -- Drop:
 alter table students drop column email;
 
+-- 13. Create a Second Table — For JOIN Practice
+
+create table courses(
+course_id int primary key,
+course_name varchar(40),
+duration_month int,
+fee int
+);
+
+insert into courses values
+(1,'java',6,15000),
+(2,'python',5,12000),
+(3,'Sql',4,10000);
+
+select*from students join courses on students.course=courses.course_name;
+
+select 
+	students.name,
+    students.course,
+    courses.duration_month,
+    courses.fee
+from students
+join courses
+on students.course = courses.course_name;
+
+
+select 
+	students.name,
+    students.department,
+    students.city,
+    courses.course_id,
+    courses.fee
+from students 
+join courses
+on students.course = courses.course_name;
+
+
+
+
 
     
-    
+   
     
     
