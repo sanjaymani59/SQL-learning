@@ -164,7 +164,16 @@ from students
 join courses
 on students.course = courses.course_name;
 
-
+-- 1. Basic LEFT JOIN
+select 
+	students.name,
+    students.department,
+    students.course,
+    courses.course_id,
+    courses.fee
+from students
+left join courses 
+on students.course = courses.course_name;
 
 
 
