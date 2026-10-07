@@ -176,6 +176,29 @@ left join courses
 on students.course = courses.course_name;
 
 
+-- 3. Practice
+-- Question 1: Display all students and their course fees.
+
+select 
+	students.name,
+    students.course,
+    courses.fee
+from students
+left join courses
+on students.course=courses.course_name;
+
+
+-- Question 2: Display only CSE students with their course fee-- 
+
+select 
+	students.name,
+    students.department,
+    students.course,
+    courses.fee
+from students 
+left join courses
+on students.course = courses.course_name
+where students.department="cse";
 
     
    
