@@ -200,7 +200,29 @@ left join courses
 on students.course = courses.course_name
 where students.department="cse";
 
+-- Question 3: Display students whose course fee is greater than ₹12,000.
+
+select 
+	students.name,
+    students.course,
+    courses.fee
+from students
+left join courses 
+on students.course = courses.course_name 
+where courses.fee>12000;
+
+    --   1. Basic RIGHT JOIN
     
+select
+	students.name,
+    students.department,
+    students.course,
+    courses.course_id,
+    courses.fee
+from students 
+right join courses
+on students.course= courses.course_name;
+		
    
     
     
