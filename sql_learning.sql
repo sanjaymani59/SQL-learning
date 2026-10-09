@@ -142,6 +142,8 @@ insert into courses values
 (2,'python',5,12000),
 (3,'Sql',4,10000);
 
+select*from courses;
+
 select*from students join courses on students.course=courses.course_name;
 
 select 
@@ -222,6 +224,38 @@ select
 from students 
 right join courses
 on students.course= courses.course_name;
+
+
+-- 3. Practice
+-- Question 1:
+-- Display all courses and the students studying them.
+
+
+select 
+	courses.course_id,
+    courses.course_name,
+    courses.fee,
+    students.name
+from students
+right join courses 
+on students.course = courses.course_name;
+
+
+
+select
+	students.name,
+    students.gender,
+    students.course,
+    courses.fee,
+    courses.course_name
+from students
+join courses
+on students.course= courses.course_name;
+    
+
+	
+
+
 		
    
     
