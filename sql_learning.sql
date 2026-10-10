@@ -252,7 +252,43 @@ from students
 join courses
 on students.course= courses.course_name;
     
+    
+    -- Question 2:-- 
+-- Display all courses and student names, sorted by fee.
 
+select
+	courses.course_name,
+    courses.fee,
+    students.name
+from students 
+right join courses 
+on students.course = courses.course_name
+order by courses.fee desc;
+
+
+-- ⚠️ MySQL does not directly support FULL OUTER JOIN. You can simulate it using LEFT JOIN, RIGHT JOIN, and UNION.
+
+select 
+	students.name,
+    students.department,
+    students.course,
+    courses.course_id,
+    courses.fee
+from students 
+left join courses
+	on students.course= courses.course_name
+union
+
+select
+	students.name,
+    students.department,
+    students.course,
+    courses.course_id,
+    courses.fee
+from students
+right join courses
+	on students.course = courses.course_name;
+		
 	
 
 
