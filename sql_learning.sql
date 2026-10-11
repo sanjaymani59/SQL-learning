@@ -200,7 +200,7 @@ select
 from students 
 left join courses
 on students.course = courses.course_name
-where students.department="cse";
+where students.department="cse";ko
 
 -- Question 3: Display students whose course fee is greater than ₹12,000.
 
