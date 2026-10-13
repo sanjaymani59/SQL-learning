@@ -5,7 +5,7 @@ use newstudent;
 create table student(
 student_id int  auto_increment ,
 name varchar(20)  not null ,
-major varchar(20) default 'undecieded' ,
+major varchar(20)  ,
 primary key(student_id));
 select*from student; 
 describe student;
@@ -21,7 +21,25 @@ insert into student values(2,'kate','Scoiology');
 insert into student values(4,'jack','Biology');
 insert into student values(5,'Mike','Computer Science');
 
-insert into student(student_id,name,major) values('jakkey','Chemistry');
+insert into student(student_id,name,major) values(3,'jakkey','Chemistry');
+
+update student
+set major ='Bio'
+where student_id=1;
+
+update student 
+set major='cse'
+where student_id=1;
+
+update student 
+set major ='Biochemistry '
+where student_id=1 or student_id=4;
+
+
+delete  from student 
+where student_id=5;
+
+select*from student; 
 
 
 -- https://youtu.be/HXV3zeQKqGY?si=NZ2PQCAQY_HBobBi 1;49"          1
