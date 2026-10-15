@@ -288,11 +288,32 @@ select
 from students
 right join courses
 	on students.course = courses.course_name;
-		
+    
+    
+    
+		-- 1. Subqueries
+
+select name,marks from students where marks>(select avg(marks) from students);
 	
 
+-- 2. CASE Statement
 
+select name,marks, 
+case 
+	when marks >= 90 then "excelent"
+    when marks >= 60 then "GOOD"
+    when marks >= 40 then "AVERAGE"
+    else 'POOR'
+end as grade 
+from students;
 		
+-- 3. GROUP BY + HAVING
+
+select department ,avg(marks) as average_marks
+from students 
+group by department
+having avg(marks)>75;
+
    
     
     
