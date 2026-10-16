@@ -200,7 +200,7 @@ select
 from students 
 left join courses
 on students.course = courses.course_name
-where students.department="cse";ko
+where students.department="cse";
 
 -- Question 3: Display students whose course fee is greater than ₹12,000.
 
@@ -314,6 +314,26 @@ from students
 group by department
 having avg(marks)>75;
 
-   
+
+
+
+
+
+-- 4. String Functions-- 
+
+select 
+	upper(name) as uppercase_name,
+    lower(city) as lowercase_city,
+    length(name) as name_length
+from students;
+
+
+-- 5.
+
+select
+	curdate() as today,
+    now() as current_timing;
+
+    
     
     
