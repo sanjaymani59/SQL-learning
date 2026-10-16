@@ -328,11 +328,54 @@ select
 from students;
 
 
--- 5.
+-- 5. Date Functions
 
 select
 	curdate() as today,
     now() as current_timing;
+    
+    
+-- 6. union 
+
+select name as person 
+from students 
+where city ='salem'
+union 
+select name as person 
+from students
+where city='chennai';
+
+
+
+-- 7. Common Table Expressions (CTEs)
+
+with high_scorers as (select
+name,marks from students 
+where marks>=85)
+select * 
+from high_scorers;
+
+
+
+-- windows function 
+
+
+select name,department,marks,rank() over (partition by department order by marks desc )
+as department_rank from students;
+
+
+-- 9. view
+
+create view top_students as select name,department,marks from students where marks>=85;
+select*from students;
+
+
+
+CREATE VIEW top_students AS
+SELECT name, department, marks
+FROM students
+WHERE marks >= 85;
+
 
     
     
