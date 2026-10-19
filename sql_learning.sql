@@ -376,6 +376,32 @@ SELECT name, department, marks
 FROM students
 WHERE marks >= 85;
 
+-- SQL Medium Concept 11: COALESCE()
+-- Concept: Replace NULL with another value.alter
+
+select
+	name,
+    coalesce(city, 'unknown') as city from students;
+
+select 
+	name,
+	coalesce(coures,'not assigned' ) as course from students;
+
+
+-- S QL Medium Concept 12: IFNULL()
+-- Concept: Replace a NULL value with another value in MySQL.
+
+
+select
+	name,
+    ifnull(city,'unknown') as city from students;
+    
+select
+	name,
+	ifnull(course, 'not assigned' ) as course from students;
+
+
+
 
     
     
