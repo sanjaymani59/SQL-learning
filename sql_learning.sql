@@ -15,8 +15,22 @@ create table students(
     admission_year int );
     
 select*from students;
-    
- 
+
+select distinct course from students;
+select course from students group by course;
+
+select name from students where name like 'a%';
+
+select course , count(*) from students group by course  ;
+select max(marks) as highest_mark from students;
+
+select max(marks) from students where marks <(select max(marks) from students) ;
+
+select substring(name,1,2) from students;
+
+select instr(lower(name),'a') from students where name='manoj';
+
+select distinct name,length(name) from students;
 
 INSERT INTO students
 (name, age, gender, department, city, marks, attendance, course, admission_year)
@@ -410,6 +424,7 @@ select
 select 
     name, coalesce (course,'Not Assigned') as course from students;
 
-    
+
+
     
     
