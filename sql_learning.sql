@@ -403,6 +403,13 @@ select
 
 
 
+-- Replace NULL with another values 
+select 
+   name,coalesce(city,'unknown ') as city from students;
+
+select 
+    name, coalesce (course,'Not Assigned') as course from students;
+
     
     
     
