@@ -58,6 +58,38 @@ select *from employee where Salary>2000000 and JobDesc="manager";
 
 select *from employee where JobDesc in ("hr", "sales");
 
+select * from employee where salary between 2000000 and 300000;
+
+select * from employee limit 5;
+
+select *from employee where ename not like 'a%';
+    
+select * from employee where ename like '%i%';
+
+select*from employee where ename like '__i%';
+
+update employee set JobDesc ='ANALAYST' where  JobDesc='ENGINEER';
+
+
+delete from employee where emp_id =2;
+
+select distinct JobDesc  from employee;
+
+select *from employee order by ename;
+
+select* from employee order by salary;
+
+select *from employee where JobDesc = "manager" order by salary;
+
+select * from employee order by (case  JobDesc
+when 'ceo' then 1
+when 'manager' then 2
+when 'hr' then 3
+when 'engineer' then  4
+when 'sales' then 5
+else 6
+end
+);
 
 
 
