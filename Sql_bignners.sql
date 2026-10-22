@@ -92,6 +92,19 @@ end
 );
 
 
+select ename , salary,jobDesc from employee where JobDesc='admin';
+
+select * from employee order by jobDesc='engineer' desc;
+
+select count(jobdesc),jobdesc  from employee where jobDesc='engineer' ;
+
+select sum(salary),jobdesc AS total from  employee where jobdesc='admin';
+
+
+select  max(salary)  as high_salary , jobdesc from employee where jobdesc='engineer' ;
+
+
+
 
 
 

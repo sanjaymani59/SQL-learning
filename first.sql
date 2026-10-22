@@ -16,20 +16,20 @@ create table employees (
     join_date date
 );
 
-/* select* from employees;
+select* from employees;
 alter table employees
-add phone_number varchar(10); */
+add phone_number varchar(10);
 
 select*from employees;
 
-/* alter table employees
+alter table employees
 add email varchar(50);
 select*from employees;
 
 alter table employees
 modify column email varchar(100);
 select*from employees;
- */
+
 
 
 
