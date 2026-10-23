@@ -103,6 +103,13 @@ select sum(salary),jobdesc AS total from  employee where jobdesc='admin';
 
 select  max(salary)  as high_salary , jobdesc from employee where jobdesc='engineer' ;
 
+select ename, salary , concat(ename , '-' , salary ) as salary_detials from employee;
+
+select ename , length(ename) as naem_length from employee;
+
+select ename , upper(ename) as name_upper from employee;
+
+
 
 
 
