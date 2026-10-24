@@ -109,7 +109,28 @@ select ename , length(ename) as naem_length from employee;
 
 select ename , upper(ename) as name_upper from employee;
 
+select count(*) from employee ;
+select count(*) from employee where JobDesc="manager";
 
+select avg(salary) from  employee ;
+
+select sum(salary) from employee where jobdesc="analyst";
+
+select max(salary) from employee;
+
+
+-- string
+
+select ucase(ename) ,salary from employee;
+
+select ename,char_length(ename) char_aount from employee;
+
+
+select ename,concat("RS  ",  salary) from employee;
+
+select ename,concat("RS  ", format(salary,0)) from employee;
+
+select ename , left(jobdesc,4) from employee; 
 
 
 
