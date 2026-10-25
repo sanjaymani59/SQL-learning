@@ -132,9 +132,24 @@ select ename,concat("RS  ", format(salary,0)) from employee;
 
 select ename , left(jobdesc,4) from employee; 
 
+select* from employee;
+
+alter table employee add column hire_date date;
+
+update employee set hire_date="2014-07-05";
+update employee set hire_date="20=05-2026";
 
 
 
+set sql_safe_updates=0;
+set sql_safe_updates=1;
+
+select date(now());
+select now();
+
+select curdate();
+
+select date_format(curdate(),"%d/%m/%y") as date;
 
 -- https://youtu.be/r5IyLq2k2Ps?si=u4pak9hpWTKuNTms 38;56
 
