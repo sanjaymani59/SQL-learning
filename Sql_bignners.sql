@@ -91,10 +91,13 @@ else 6
 end
 );
 
-
+select* from employee;
 select ename , salary,jobDesc from employee where JobDesc='admin';
+select ename,salary , jobDesc from employee where jobDesc="manager";
 
 select * from employee order by jobDesc='engineer' desc;
+select * from employee order by ename;
+select * from employee order by JobDesc; 
 
 select count(jobdesc),jobdesc  from employee where jobDesc='engineer' ;
 
