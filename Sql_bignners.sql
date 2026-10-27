@@ -154,6 +154,26 @@ select curdate();
 
 select date_format(curdate(),"%d/%m/%y") as date;
 
+select * from employee limit 5 offset 5;
+
+select ename,salary from employee order by ename desc limit 3 offset 2;
+
+select * from employee where ename like 'a%'; 
+
+select * from employee where ename like '%a';
+
+select *from employee where ename like '%n%';
+
+select ename , salary from employee where Salary between 100000 and 3000000;
+
+select ename , salary from employee where Salary  not between 100000 and 3000000;
+
+select ename,jobdesc from employee where JobDesc in ("admin","hr");
+
+
+
+
+
 -- https://youtu.be/r5IyLq2k2Ps?si=u4pak9hpWTKuNTms 38;56
 
 
