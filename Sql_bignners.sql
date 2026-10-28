@@ -170,8 +170,14 @@ select ename , salary from employee where Salary  not between 100000 and 3000000
 
 select ename,jobdesc from employee where JobDesc in ("admin","hr");
 
+select date_add(curdate(),interval 1 week) as "after one week";
+select date_add(curdate(),interval 1 year) as "after one month";
 
+select  * from employee order by JobDesc;
 
+select JobDesc,avg(Salary) from employee group by JobDesc;  
+
+select jobdesc,count(emp_id) from employee group by JobDesc;
 
 
 -- https://youtu.be/r5IyLq2k2Ps?si=u4pak9hpWTKuNTms 38;56
