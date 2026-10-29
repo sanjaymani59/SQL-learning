@@ -179,7 +179,27 @@ select JobDesc,avg(Salary) from employee group by JobDesc;
 
 select jobdesc,count(emp_id) from employee group by JobDesc;
 
+select jobdesc,count(emp_id) from employee 
+group by JobDesc having count(emp_id)>1 
+order by JobDesc;
 
--- https://youtu.be/r5IyLq2k2Ps?si=u4pak9hpWTKuNTms 38;56
+select jobdesc,count(emp_id) from employee 
+where Salary>1500000
+group by JobDesc having count(emp_id)>1 
+order by JobDesc;
 
 
+
+
+
+
+
+
+
+
+
+-- HACKER RANK
+https://youtu.be/r5IyLq2k2Ps?si=u4pak9hpWTKuNTms 38;56
+
+
+https://sqlbolt.com/lesson/filtering_sorting_query_results
