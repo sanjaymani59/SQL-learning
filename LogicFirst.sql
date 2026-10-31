@@ -23,3 +23,9 @@ constraint fk_brachId foreign key(branch_id) references branch(branch_id)
  insert into employee(ename,salary) values("reamya",300000);
  
  select *from employee;
+ 
+ show index from employee;
+ 
+ create index name_index on employee(ename);
+ alter table employee drop index name_index;
+ 
