@@ -29,3 +29,35 @@ constraint fk_brachId foreign key(branch_id) references branch(branch_id)
  create index name_index on employee(ename);
  alter table employee drop index name_index;
  
+ alter table employee add constraint unique_name unique(Ename);
+ 
+  -- -----------------------------------------------------------
+  
+   -- ============================================================= 
+ 
+ INSERT INTO branch(br_name, addr)
+VALUES
+('Chennai', 'Anna Nagar'),
+('Salem', 'New Bus Stand'),
+('Coimbatore', 'Gandhipuram');
+
+INSERT INTO employee(Ename, JobDesc, Salary, branch_id)
+VALUES
+('Ramya', 'Manager', 50000, 1),
+('Arun', 'Developer', 35000, 2),
+('Priya', 'Tester', 30000, 3);
+
+
+update employee set salary =40000 where Emp_id=2;
+delete from employee where Emp_id=2;
+
+select employee.Ename,branch.br_name from employee inner join branch on employee.branch_id= branch.branch_id;
+
+
+
+
+
+ 
+ 
+ -- =============================================================== 
+ 
