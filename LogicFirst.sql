@@ -55,9 +55,12 @@ select employee.Ename,branch.br_name from employee inner join branch on employee
 
 
 
+select sum(salary) from employee;
 
+select avg(salary) from employee;
 
- 
- 
+select max(salary) from employee;
+
+select branch_id , count(*) from employee group by branch_id;
  -- =============================================================== 
  
