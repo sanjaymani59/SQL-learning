@@ -62,5 +62,11 @@ select avg(salary) from employee;
 select max(salary) from employee;
 
 select branch_id , count(*) from employee group by branch_id;
+
+
+delete from students where id=4;
+update students set age=22 where id=1;
+select * from students where age=30;
+
  -- =============================================================== 
  
