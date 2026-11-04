@@ -68,5 +68,14 @@ delete from students where id=4;
 update students set age=22 where id=1;
 select * from students where age=30;
 
+select * from employee where first_name like "j%"
+
+select * from employee where first_name like "%j"
+
+select * from employee  order by  last_name asc;
+
+select *from employee order by last_name desc;
+
+
  -- =============================================================== 
  
