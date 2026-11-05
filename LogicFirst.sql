@@ -76,6 +76,19 @@ select * from employee  order by  last_name asc;
 
 select *from employee order by last_name desc;
 
+create database college;
+use college;
+
+create table students(
+  id int ;
+  name varchar(32);
+  age int;
+);
+
+insert into students values (2,"man",34);
+select *from students;
+
+
 
  -- =============================================================== 
  
