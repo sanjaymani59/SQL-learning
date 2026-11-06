@@ -88,6 +88,18 @@ create table students(
 insert into students values (2,"man",34);
 select *from students;
 
+update students set marks=40 where id=9;
+
+delete from students where id=4;
+
+select *from students where age=39 and marks >39;
+
+select*from students where department ='cse' or department='it';
+
+select *from students where name like 'A%';
+
+select *from students where marks between 40 and 30;
+
 
 
  -- =============================================================== 
