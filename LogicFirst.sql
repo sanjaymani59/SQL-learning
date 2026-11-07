@@ -30,6 +30,13 @@ constraint fk_brachId foreign key(branch_id) references branch(branch_id)
  alter table employee drop index name_index;
  
  alter table employee add constraint unique_name unique(Ename);
+
+select employee.Emp_id,employee.ename,employee.JobDesc.br_name
+from employee join branch 
+on employee.branch_id= branch.branch_id 
+order by employee.Emp_id
+ 
+  
  
   -- -----------------------------------------------------------
   
