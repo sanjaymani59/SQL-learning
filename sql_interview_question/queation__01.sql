@@ -50,3 +50,16 @@ select * from Employee;
 select * from Employee where salary>3000;
 -- Question 2: Find employees working in IT.
 select * from Employee where department="it";
+-- Question 3: Display the highest salary.
+select max(salary) from Employee;
+-- Question 4: Display the lowest salary.
+select min(salary) from Employee;
+Output: 25000
+-- Question 5: Find the average salary.
+select avg(salary) form Employee;
+-- Question 6: Count total employees.
+select count(*) from Employee;
+-- Question 7: Find employees whose names start with A.
+select * form Employee where emp_name like 'A%';
+-- Question 8: Display the top 3 highest-paid employees.
+select * from Employee order by salary limit 3;
