@@ -63,3 +63,5 @@ select count(*) from Employee;
 select * form Employee where emp_name like 'A%';
 -- Question 8: Display the top 3 highest-paid employees.
 select * from Employee order by salary limit 3;
+-- Question 9: Find the second-highest salary.
+select max(salary) from Employee where salary<(select max(salary) from Employee);
