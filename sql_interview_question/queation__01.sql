@@ -65,3 +65,19 @@ select * form Employee where emp_name like 'A%';
 select * from Employee order by salary limit 3;
 -- Question 9: Find the second-highest salary.
 select max(salary) from Employee where salary<(select max(salary) from Employee);
+
+-- Question 10: Count employees in each department.
+select department,count(*) as total from Employee group by department;
+-- Question 11: Find departments with more than 2 employees.
+select department,count(*) as total form Employee group by department having count(*) >2;
+
+
+
+
+
+
+
+
+
+
+
