@@ -70,6 +70,12 @@ select max(salary) from Employee where salary<(select max(salary) from Employee)
 select department,count(*) as total from Employee group by department;
 -- Question 11: Find departments with more than 2 employees.
 select department,count(*) as total form Employee group by department having count(*) >2;
+-- Question 12: Find employees earning between 25,000 and 40,000.
+select * from Employee where salary between 25000 and 400000;
+-- Question 13: Find employees who are not from Chennai.
+select *from Employee where city<> 'chennai';
+-- Question 14: Find employees earning above average salary.
+select* from Employee where salary>(select avg(salary) from Employee);
 
 
 
@@ -80,4 +86,4 @@ select department,count(*) as total form Employee group by department having cou
 
 
 
-
++
