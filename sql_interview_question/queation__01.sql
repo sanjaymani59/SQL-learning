@@ -76,6 +76,11 @@ select * from Employee where salary between 25000 and 400000;
 select *from Employee where city<> 'chennai';
 -- Question 14: Find employees earning above average salary.
 select* from Employee where salary>(select avg(salary) from Employee);
+-- Question 15: Find the third-highest salary.
+select distinct salary from Employee order by salary desc limit 1 offset 2;
+-- Question 16: Find the highest salary in each department.
+select department,max(salary) as highest_salary from Employee group by department;
+
 
 
 
