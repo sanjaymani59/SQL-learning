@@ -80,7 +80,16 @@ select* from Employee where salary>(select avg(salary) from Employee);
 select distinct salary from Employee order by salary desc limit 1 offset 2;
 -- Question 16: Find the highest salary in each department.
 select department,max(salary) as highest_salary from Employee group by department;
+-- Question 17: Find the second-highest salary in each department.
 
+
+select department,(max(salary) as second_highest) from(
+    select department,salary,dense_rank() over(
+        partition by department order by salary desc 
+    ) as ranking from Employee 
+)
+as ranked where ranking =2
+group by department;
 
 
 
