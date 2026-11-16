@@ -92,6 +92,14 @@ as ranked where ranking =2
 group by department;
 
 
+-- Question 18: Rank employees based on salary.
+
+select emp_name,salary,rank() over(order by salary desc) as employee_rank from Employee;
+
+-- Question 19: Find duplicate department names.
+
+select department,count(*) as total from Employee group by department having count(*) >1;
+
 
 
 
