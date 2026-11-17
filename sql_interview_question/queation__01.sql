@@ -99,13 +99,25 @@ select emp_name,salary,rank() over(order by salary desc) as employee_rank from E
 -- Question 19: Find duplicate department names.
 
 select department,count(*) as total from Employee group by department having count(*) >1;
+-- Question 20: Increase every employee's salary by 10%
+
+update Employee set salary = salary*1.10;
+
+-- Level 4: SQL JOIN Interview Coding
+
+create table Projects (
+    Project_id int primary key,
+    Project_name varchar(50),
+    emp_id int,
+    foreign key (emp_id) references Employee(emp_id)
+);
 
 
 
 
 
+select* from Projects;
 
 
 
 
-+
