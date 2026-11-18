@@ -119,5 +119,18 @@ create table Projects (
 select* from Projects;
 
 
+insert into Projects values
+(101,"website",1),
+(102,"Datebase",3),
+(103,"ai project ", 5),
+(104, "mobile app ",8),
+(105,"security ",2);
 
+-- Question 21: Display employee names with project names.
 
+select 
+    Employee.emp_name,
+    Projects.Project_name
+from Employee 
+inner JOIN Projects 
+on Employee.emp_id=Projects.emp_id;
