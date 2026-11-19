@@ -134,3 +134,12 @@ select
 from Employee 
 inner JOIN Projects 
 on Employee.emp_id=Projects.emp_id;
+
+-- Question 22: Display all employees, including those without projects.
+
+select 
+        Employee.emp_name,
+        Projects.Project_name
+from Employee
+left join Projects
+on Employee.emp_id=Projects.emp_id;
