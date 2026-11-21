@@ -30,6 +30,8 @@ alter table employees
 modify column email varchar(100);
 select*from employees;
 
+alter table employees add ph varchar(10);
+select *from employees;
 
 
 
