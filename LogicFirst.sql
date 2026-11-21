@@ -21,6 +21,9 @@ constraint fk_brachId foreign key(branch_id) references branch(branch_id)
  drop foreign key fk_brachId;
  
  insert into employee(ename,salary) values("reamya",300000);
+
+insert into employee (ename,salary)
+values ("sam",400000);
  
  select *from employee;
  
